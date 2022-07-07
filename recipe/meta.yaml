@@ -1,4 +1,4 @@
-{% set version = "0.2.3" %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/stacks_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/stacks/stacks_{{ version }}.tar.gz
-  sha256: 8f19ef6ec3b55f46375ecd5feaaca29ab42ea32cd91726207d800cfd0dba3a3c
+  sha256: 837046fab1f56079b07131ea538ae07147c72ee65d683edaa9f6485d4e7ce8a7
 
 build:
   merge_build_host: true  # [win]
