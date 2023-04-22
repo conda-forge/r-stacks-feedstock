@@ -1,11 +1,11 @@
-About r-stacks
-==============
+About r-stacks-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-stacks-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=stacks
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-stacks-feedstock/blob/main/LICENSE.txt)
 
 Summary: Model stacking is an ensemble technique that involves training a model to combine the outputs of many diverse statistical models, and has been shown to improve predictive performance in a variety of settings. 'stacks' implements a grammar for 'tidymodels'-aligned model stacking.
 
