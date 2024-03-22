@@ -1,4 +1,4 @@
-{% set version = "1.0.3" %}
+{% set version = "1.0.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/stacks_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/stacks/stacks_{{ version }}.tar.gz
-  sha256: 04279e708340bb0c21582d274c5e3451a4fc28142d0d5aa3fe199e33dbd4d76d
+  sha256: 38f11af357c230aea146616d20b0b6fc2fdeb24ba32b72b41a70a0d7a5a948c4
 
 build:
   merge_build_host: true  # [win]
@@ -22,51 +22,51 @@ build:
 
 requirements:
   build:
-    - {{ posix }}zip               # [win]
+    - {{ posix }}zip      # [win]
   host:
     - r-base
     - r-butcher >=0.1.3
     - r-cli
-    - r-dials
-    - r-dplyr >=1.0.0
+    - r-dofuture
+    - r-dplyr >=1.1.0
     - r-foreach
+    - r-future
     - r-generics
     - r-ggplot2
     - r-glmnet
     - r-glue
-    - r-parsnip >=0.0.4
-    - r-purrr >=0.3.2
-    - r-recipes >=0.1.15
-    - r-rlang >=0.4.0
-    - r-rsample >=0.0.9
+    - r-parsnip >=1.2.0
+    - r-purrr >=1.0.0
+    - r-recipes >=1.0.10
+    - r-rlang >=1.1.3
+    - r-rsample >=1.2.0
     - r-tibble >=2.1.3
     - r-tidyr
-    - r-tune >=0.1.2.9000
-    - r-workflows >=0.2.1.9000
-    - r-workflowsets >=0.0.0.9001
-    - r-yardstick
+    - r-tune >=1.2.0
+    - r-vctrs >=0.6.1
+    - r-workflows >=1.1.4
   run:
     - r-base
     - r-butcher >=0.1.3
     - r-cli
-    - r-dials
-    - r-dplyr >=1.0.0
+    - r-dofuture
+    - r-dplyr >=1.1.0
     - r-foreach
+    - r-future
     - r-generics
     - r-ggplot2
     - r-glmnet
     - r-glue
-    - r-parsnip >=0.0.4
-    - r-purrr >=0.3.2
-    - r-recipes >=0.1.15
-    - r-rlang >=0.4.0
-    - r-rsample >=0.0.9
+    - r-parsnip >=1.2.0
+    - r-purrr >=1.0.0
+    - r-recipes >=1.0.10
+    - r-rlang >=1.1.3
+    - r-rsample >=1.2.0
     - r-tibble >=2.1.3
     - r-tidyr
-    - r-tune >=0.1.2.9000
-    - r-workflows >=0.2.1.9000
-    - r-workflowsets >=0.0.0.9001
-    - r-yardstick
+    - r-tune >=1.2.0
+    - r-vctrs >=0.6.1
+    - r-workflows >=1.1.4
 
 test:
   commands:
@@ -74,7 +74,8 @@ test:
     - "\"%R%\" -e \"library('stacks')\""  # [win]
 
 about:
-  home: https://CRAN.R-project.org/package=stacks
+  home: https://stacks.tidymodels.org/
+  dev_url: https://github.com/tidymodels/stacks
   license: MIT
   summary: Model stacking is an ensemble technique that involves training a model to combine the outputs of many diverse statistical models, and has been shown to improve predictive performance in a variety of settings. 'stacks' implements a grammar for 'tidymodels'-aligned model stacking.
   license_family: MIT
@@ -85,23 +86,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-
-# Package: stacks
-# Title: Tidy Model Stacking
-# Version: 0.1.0
-# Authors@R: c( person(given = "Simon", family = "Couch", role = c("aut", "cre"), email = "simonpatrickcouch@gmail.com"), person(given = "Max", family = "Kuhn", email = "max@rstudio.com", role = "aut"), person("RStudio", role = "cph") )
-# Description: Model stacking is an ensemble technique that involves training a model to combine the outputs of many diverse statistical models, and has been shown to improve predictive performance in a variety of settings. 'stacks' implements a grammar for 'tidymodels'-aligned model stacking.
-# License: MIT + file LICENSE
-# Depends: R (>= 2.10)
-# Imports: tune (>= 0.1.2), dplyr (>= 1.0.0), rlang (>= 0.4.0), tibble (>= 2.1.3), purrr (>= 0.3.2), parsnip (>= 0.0.4), workflows (>= 0.1.0), recipes (>= 0.1.15), yardstick, tidyr, dials, digest, glue, ggplot2, glmnet, rsample, cli, butcher, stats, foreach, generics
-# Suggests: testthat, covr, kernlab, knitr, modeldata, rmarkdown, palmerpenguins, ranger, nnet, kknn
-# Encoding: UTF-8
-# LazyData: true
-# RoxygenNote: 7.1.1
-# VignetteBuilder: knitr
-# NeedsCompilation: no
-# Packaged: 2020-11-20 00:13:21 UTC; simonpcouch
-# Author: Simon Couch [aut, cre], Max Kuhn [aut], RStudio [cph]
-# Maintainer: Simon Couch <simonpatrickcouch@gmail.com>
-# Repository: CRAN
-# Date/Publication: 2020-11-23 08:40:02 UTC

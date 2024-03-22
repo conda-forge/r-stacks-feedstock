@@ -3,11 +3,13 @@ About r-stacks-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-stacks-feedstock/blob/main/LICENSE.txt)
 
-Home: https://CRAN.R-project.org/package=stacks
+Home: https://stacks.tidymodels.org/
 
 Package license: MIT
 
 Summary: Model stacking is an ensemble technique that involves training a model to combine the outputs of many diverse statistical models, and has been shown to improve predictive performance in a variety of settings. 'stacks' implements a grammar for 'tidymodels'-aligned model stacking.
+
+Development: https://github.com/tidymodels/stacks
 
 Current build status
 ====================
@@ -95,7 +97,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
